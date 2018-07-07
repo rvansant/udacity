@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ListContacts from './ListContacts';
+import propTypes from 'prop-types';
 
 
 class App extends Component {
@@ -44,6 +45,11 @@ class App extends Component {
       </div>
     );
   }
+}
+
+ListContacts.propTypes = {
+  contacts: propTypes.array.isRequired,
+  onDeleteContact: propTypes.func.isRequired,
 }
 
 export default App;
